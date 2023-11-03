@@ -28,4 +28,12 @@
   min-width: 100px;
 }
 
-
+.more-btn {
+  background-color: $light-grey;
+  color: $dark-grey;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: $dark-blue;
+    color: white;
+  }
+}
