@@ -16,7 +16,7 @@
       </thead>
       <tbody class="text-gray-dark">
         <tr *ngFor="let order of recentOrders; index as i" class="border-t">
-          <td class="px-4 py-2">{{ i }}</td>
+          <td class="px-4 py-2">{{ i + 1 }}</td>
           <td class="px-4 py-2">{{ order.name }}</td>
           <td class="px-4 py-2">{{ order.product }}</td>
           <td class="px-4 py-2">
