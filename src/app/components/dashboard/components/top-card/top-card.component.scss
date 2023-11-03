@@ -3,7 +3,6 @@
   .value-text {
     font-size: xx-large;
   }
-
   .value-icon {
     font-size: xx-large;
   }
@@ -13,6 +12,10 @@
   }
 
   .sub-header-text {
-    font-size: x-small;
+    font-size: small;
+  }
+
+  &:hover * {
+    color: white !important;
   }
 }

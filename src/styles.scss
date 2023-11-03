@@ -3,6 +3,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@import "./variables.scss";
+
 .menu-icon {
   width: 64px;
   height: 64px;
@@ -13,10 +15,10 @@
   z-index: 100;
 
   &.side-nav-icon {
-    color: rgb(146, 146, 146);
+    color: $dark-grey;
     &:hover {
       transition: 0.2s color cubic-bezier(0.165, 0.84, 0.44, 1);
-      color: rgb(96 165 250);
+      color: $medium-blue;
     }
   }
 }
@@ -29,17 +31,91 @@
   align-items: center;
   cursor: pointer;
   z-index: 100;
-  color: rgb(146, 146, 146);
+  color: $dark-grey;
+}
+
+.table-container {
+  height: 320px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: $medium-grey;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: $dark-grey;
+}
+
+.text-gray-light {
+  color: $light-grey;
+}
+
+.text-gray-medium {
+  color: $medium-grey;
+}
+
+.text-gray-dark {
+  color: $dark-grey;
+}
+
+.text-gray-darker {
+  color: $darker-grey;
+}
+
+.text-blue-light {
+  color: $light-blue;
+}
+
+.text-blue-medium {
+  color: $medium-blue;
+}
+
+.text-blue-dark {
+  color: $dark-blue;
+}
+
+.text-blue-darker {
+  color: $darker-blue;
+}
+
+.bg-gray-light {
+  background-color: $light-grey;
+}
+
+.bg-gray-medium {
+  background-color: $medium-grey;
+}
+
+.bg-gray-dark {
+  background-color: $dark-grey;
+}
+
+.bg-gray-darker {
+  background-color: $darker-grey;
+}
+
+.bg-blue-light {
+  background-color: $light-blue;
+}
+
+.bg-blue-medium {
+  background-color: $medium-blue;
+}
+
+.bg-blue-dark {
+  background-color: $dark-blue;
+}
+
+.bg-blue-darker {
+  background-color: $darker-blue;
 }

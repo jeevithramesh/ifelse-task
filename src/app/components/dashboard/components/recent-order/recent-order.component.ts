@@ -8,7 +8,18 @@ import { IRecentOrder } from 'src/app/models/dashboard.model';
 })
 export class RecentOrderComponent implements OnInit {
   @Input() recentOrders!: IRecentOrder[];
+  isDialogOpen = false;
+  selectedUser: any = {};
   constructor() {}
 
   ngOnInit(): void {}
+  openDialog(user: any) {
+    this.selectedUser = user;
+    this.isDialogOpen = true;
+  }
+
+  closeDialog() {
+    this.selectedUser = {};
+    this.isDialogOpen = false;
+  }
 }

@@ -1,35 +1,31 @@
-.table-h {
-  height: 320px;
-}
-
-.progress-bar {
-  background-color: #3498db; /* Default color */
-}
+@import "src/variables.scss";
 
 .progress-bar-high {
-  background-color: #27ae60; /* Green for high progress */
+  background-color: $color-info;
 }
 
 .progress-bar-medium {
-  background-color: #f1c40f; /* Yellow for medium progress */
+  background-color: $color-warning;
 }
 
 .progress-bar-low {
-  background-color: #e74c3c; /* Red for low progress */
-}
-
-.progress-text {
-  color: #3498db; /* Default color */
+  background-color: $color-danger;
 }
 
 .progress-text-high {
-  color: #27ae60; /* Green for high progress */
+  color: $color-info;
 }
 
 .progress-text-medium {
-  color: #f1c40f; /* Yellow for medium progress */
+  color: $color-warning;
 }
 
 .progress-text-low {
-  color: #e74c3c; /* Red for low progress */
+  color: $color-danger;
 }
+
+.progress-min-width {
+  min-width: 100px;
+}
+
+

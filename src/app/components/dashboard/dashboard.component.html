@@ -1,21 +1,31 @@
 <div
-  class="flex flex-col gap-4 bg-gray-100 spacer page-size flex-grow p-12 overflow-scroll overflow-x-hidden"
+  class="flex flex-col gap-4 bg-gray-light page-size flex-grow p-12 overflow-scroll overflow-x-hidden"
 >
   <ng-container *ngIf="dashBoardData">
-    <div class="w-full grid grid-cols-4 gap-4 top-section">
+    <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
       <ng-container *ngFor="let cardData of dashBoardData.top_cards">
         <app-top-card [cardData]="cardData"></app-top-card>
       </ng-container>
     </div>
-    <div class="w-full flex flex-row gap-4 top-section">
+    <div class="w-full flex flex-col md:flex-row gap-4">
       <app-recent-order
-        class="w-3/5"
+        class="w-full md:w-3/5"
         [recentOrders]="dashBoardData.recent_orders"
       ></app-recent-order>
       <app-new-user
-        class="w-3/5"
+        class="w-full md:w-2/5"
         [newUsers]="dashBoardData.new_users"
       ></app-new-user>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div *ngFor="let chartData of chartDataArray">
+        <app-graph-display
+          [chartType]="chartData.chartType"
+          [chartData]="chartData.chartData"
+          [chartOptions]="chartData.chartOptions"
+          [chartTitle]="chartData.chartTitle"
+        ></app-graph-display>
+      </div>
     </div>
   </ng-container>
 </div>

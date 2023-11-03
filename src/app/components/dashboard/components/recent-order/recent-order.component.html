@@ -1,10 +1,8 @@
-<div class="p-8 bg-white">
-  <div class="text-xl font-semibold mb-2">Recent Order</div>
-  <div class="table-h overflow-y-auto overflow-x-hidden">
-    <table
-      class="min-w-full overflow-hidden text-center border-gray-300"
-    >
-      <thead class="border-t text-gray-600">
+<div class="p-8 bg-white rounded-sm">
+  <div class="text-xl font-semibold mb-2 text-gray-darker">Recent Order</div>
+  <div class="table-container overflow-auto">
+    <table class="min-w-full overflow-hidden text-center border-gray-300">
+      <thead class="border-t text-gray-darker">
         <tr>
           <th class="px-4 py-2">#</th>
           <th class="px-4 py-2">Customer</th>
@@ -16,7 +14,7 @@
           <th class="px-4 py-2"></th>
         </tr>
       </thead>
-      <tbody class="text-gray-500">
+      <tbody class="text-gray-dark">
         <tr *ngFor="let order of recentOrders; index as i" class="border-t">
           <td class="px-4 py-2">{{ i }}</td>
           <td class="px-4 py-2">{{ order.name }}</td>
@@ -24,14 +22,36 @@
           <td class="px-4 py-2">
             {{ order.delivery_date | date : "dd MMM, yyyy" }}
           </td>
-          <td class="px-4 py-2">{{ order.status }}</td>
+          <td class="px-4 py-2">
+            <div class="px-2 py-1 text-white" [ngClass]="order.status">
+              {{ order.status }}
+            </div>
+          </td>
           <td class="px-4 py-2">{{ order.tracking_no }}</td>
           <td class="px-4 py-2">{{ order.shipping ? "Yes" : "No" }}</td>
           <td class="px-4 py-2">
-            <fa-icon class="cursor-pointer" [icon]="'times'"></fa-icon>
+            <fa-icon
+              class="cursor-pointer"
+              (click)="openDialog(order)"
+              [icon]="'times'"
+            ></fa-icon>
           </td>
         </tr>
       </tbody>
     </table>
+  </div>
+</div>
+
+<div *ngIf="isDialogOpen" class="dialog-overlay">
+  <div class="dialog-content">
+    <div class="flex gap-4 justify-between">
+      <h2>Product Details of {{ selectedUser.name }}</h2>
+      <fa-icon
+        (click)="closeDialog()"
+        class="cursor-pointer"
+        [icon]="'times'"
+      ></fa-icon>
+    </div>
+    <p><strong>Product Name:</strong> {{ selectedUser.product }}</p>
   </div>
 </div>
