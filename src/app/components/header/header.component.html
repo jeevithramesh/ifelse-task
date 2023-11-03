@@ -1,7 +1,9 @@
 <header
   class="px-6 py-2 w-full gap-4 flex-row flex justify-between items-center"
 >
-  <div class="bg-gray-light rounded-lg flex flex-row items-center gap-2 flex-grow">
+  <div
+    class="bg-gray-light rounded-lg flex flex-row items-center gap-2 flex-grow"
+  >
     <fa-icon class="text-gray-dark pl-2" [icon]="'search'"></fa-icon>
     <input
       type="text"
@@ -10,10 +12,9 @@
     />
   </div>
 
-  <div class="flex items-center gap-1 ml-auto">
+  <div class="display-none md:flex items-center gap-1 ml-auto">
     <div class="flex flex-row rounded-lg border-2 z-1000">
       <select
-        (change)="changeLang($event)"
         #selectLang
         [value]="currentLang"
         class="p-2 focus:outline-none rounded-lg appearance-none"
@@ -21,10 +22,7 @@
         <option value="en">ENG</option>
         <option value="fr">FR</option>
       </select>
-      <div
-        (click)="selectLang.click()"
-        class="flex items-center px-2 medium-text"
-      >
+      <div class="flex items-center px-2 medium-text">
         <fa-icon [icon]="'chevron-down'"></fa-icon>
       </div>
     </div>

@@ -10,8 +10,4 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  changeLang(event: Event) {
-    console.log(event);
-  }
 }
