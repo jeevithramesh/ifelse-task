@@ -1,3 +1,21 @@
-<div class="flex bg-gray-100 spacer page-size flex-grow">
-  <div></div>
+<div
+  class="flex flex-col gap-4 bg-gray-100 spacer page-size flex-grow p-12 overflow-scroll overflow-x-hidden"
+>
+  <ng-container *ngIf="dashBoardData">
+    <div class="w-full grid grid-cols-4 gap-4 top-section">
+      <ng-container *ngFor="let cardData of dashBoardData.top_cards">
+        <app-top-card [cardData]="cardData"></app-top-card>
+      </ng-container>
+    </div>
+    <div class="w-full flex flex-row gap-4 top-section">
+      <app-recent-order
+        class="w-3/5"
+        [recentOrders]="dashBoardData.recent_orders"
+      ></app-recent-order>
+      <app-new-user
+        class="w-3/5"
+        [newUsers]="dashBoardData.new_users"
+      ></app-new-user>
+    </div>
+  </ng-container>
 </div>

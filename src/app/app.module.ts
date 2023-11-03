@@ -9,10 +9,16 @@ import {
   FontAwesomeModule,
 } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, SideNavComponent, HeaderComponent],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FontAwesomeModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

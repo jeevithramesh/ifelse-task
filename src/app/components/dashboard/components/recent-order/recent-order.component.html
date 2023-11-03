@@ -1,1 +1,37 @@
-<p>recent-order works!</p>
+<div class="p-8 bg-white">
+  <div class="text-xl font-semibold mb-2">Recent Order</div>
+  <div class="table-h overflow-y-auto overflow-x-hidden">
+    <table
+      class="min-w-full overflow-hidden text-center border-gray-300 "
+    >
+      <thead class="border-t text-gray-600">
+        <tr>
+          <th class="px-4 py-2">#</th>
+          <th class="px-4 py-2">Customer</th>
+          <th class="px-4 py-2">Products</th>
+          <th class="px-4 py-2">Delivery Date</th>
+          <th class="px-4 py-2">Status</th>
+          <th class="px-4 py-2">Tracking No#</th>
+          <th class="px-4 py-2">Shipping</th>
+          <th class="px-4 py-2"></th>
+        </tr>
+      </thead>
+      <tbody class="text-gray-500">
+        <tr *ngFor="let order of recentOrders; index as i" class="border-t">
+          <td class="px-4 py-2">{{ i }}</td>
+          <td class="px-4 py-2">{{ order.name }}</td>
+          <td class="px-4 py-2">{{ order.product }}</td>
+          <td class="px-4 py-2">
+            {{ order.delivery_date | date : "dd MMM, yyyy" }}
+          </td>
+          <td class="px-4 py-2">{{ order.status }}</td>
+          <td class="px-4 py-2">{{ order.tracking_no }}</td>
+          <td class="px-4 py-2">{{ order.shipping ? "Yes" : "No" }}</td>
+          <td class="px-4 py-2">
+            <fa-icon class="cursor-pointer" [icon]="'times'"></fa-icon>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

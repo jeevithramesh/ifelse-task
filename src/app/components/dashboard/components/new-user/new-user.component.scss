@@ -1,0 +1,36 @@
+.table-h {
+  height: 320px;
+}
+
+.progress-bar {
+  background-color: #3498db; /* Default color */
+}
+
+.progress-bar-high {
+  background-color: #27ae60; /* Green for high progress */
+}
+
+.progress-bar-medium {
+  background-color: #f1c40f; /* Yellow for medium progress */
+}
+
+.progress-bar-low {
+  background-color: #e74c3c; /* Red for low progress */
+}
+
+/* Define classes for different progress text colors */
+.progress-text {
+  color: #3498db; /* Default color */
+}
+
+.progress-text-high {
+  color: #27ae60; /* Green for high progress */
+}
+
+.progress-text-medium {
+  color: #f1c40f; /* Yellow for medium progress */
+}
+
+.progress-text-low {
+  color: #e74c3c; /* Red for low progress */
+}

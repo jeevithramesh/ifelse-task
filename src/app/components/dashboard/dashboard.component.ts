@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IDashboardData } from 'src/app/models/dashboard.model';
+import { DashboardService } from 'src/app/services/dashboard.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
-  constructor() {}
+  dashBoardData!: IDashboardData;
+  constructor(private dashboardService: DashboardService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.dashboardService.getDashboardData().subscribe({
+      next: (data: IDashboardData) => {
+        this.dashBoardData = data;
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
+  }
 }

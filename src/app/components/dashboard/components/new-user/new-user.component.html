@@ -1,1 +1,44 @@
-<p>new-user works!</p>
+<div class="p-8 bg-white">
+  <div class="text-xl font-semibold mb-2">New User Registrations</div>
+  <div class="table-h overflow-y-auto overflow-x-hidden">
+    <table class="min-w-full overflow-hidden border-gray-300">
+      <tbody>
+        <tr *ngFor="let user of newUsers" class="border-t">
+          <td class="p-2">
+            <div class="w-10 h-10 rounded-full overflow-hidden">
+              <img
+                [src]="user.picture"
+                alt="{{ user.name }}"
+                class="w-full h-full object-contain"
+              />
+            </div>
+          </td>
+          <td class="p-2">
+            <div class="font-semibold">{{ user.name }}</div>
+            <div class="text-gray-600 text-xs">{{ user.country }}</div>
+          </td>
+          <td class="p-2 w-36">
+            <div class="flex items-center flex-row gap-2 rounded-full h-2">
+              <div
+                [ngClass]="getProgressBarClass(user.progress)"
+                class="rounded-full h-1"
+                [style.width]="user.progress + '%'"
+              ></div>
+              <div
+                [ngClass]="getProgressTextClass(user.progress)"
+                class="text-xs font-semibold"
+              >
+                {{ user.progress }}%
+              </div>
+            </div>
+          </td>
+          <td class="p-2">
+            <button class="bg-blue-500 text-xs text-white px-3 py-1 rounded-sm">
+              More
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

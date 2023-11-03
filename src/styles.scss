@@ -31,3 +31,15 @@
   z-index: 100;
   color: rgb(146, 146, 146);
 }
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
