@@ -44,14 +44,17 @@
 
 <div *ngIf="isDialogOpen" class="dialog-overlay">
   <div class="dialog-content">
-    <div class="flex gap-4 justify-between">
-      <h2>Product Details of {{ selectedUser.name }}</h2>
+    <div class="flex gap-4 justify-between mb-2">
+      <h2>Product Details</h2>
       <fa-icon
         (click)="closeDialog()"
         class="cursor-pointer"
         [icon]="'times'"
       ></fa-icon>
     </div>
-    <p><strong>Product Name:</strong> {{ selectedUser.product }}</p>
+    <div>
+      <b>{{ selectedUser.name }}</b> has purchased
+      <b>{{ selectedUser.product }}</b>
+    </div>
   </div>
 </div>
