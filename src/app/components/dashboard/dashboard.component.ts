@@ -32,7 +32,7 @@ export class DashboardComponent implements OnInit {
     {
       chartType: 'bar',
       chartData: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
         datasets: [
           {
             label: 'Income (INR)',
