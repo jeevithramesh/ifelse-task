@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.menu-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+
+  &.side-nav-icon {
+    color: rgb(146, 146, 146);
+    &:hover {
+      transition: 0.2s color cubic-bezier(0.165, 0.84, 0.44, 1);
+      color: rgb(96 165 250);
+    }
+  }
+}
+
+.header-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+  color: rgb(146, 146, 146);
+}

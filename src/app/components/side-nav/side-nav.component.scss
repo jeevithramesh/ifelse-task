@@ -1,0 +1,11 @@
+.route-name {
+  transition: width 0.2s ease-in-out;
+}
+.open-side-nav {
+  width: 120px;
+}
+
+.close-side-nav {
+  visibility: hidden;
+  width: 0px;
+}

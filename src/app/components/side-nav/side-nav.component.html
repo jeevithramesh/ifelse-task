@@ -1,0 +1,19 @@
+<aside class="h-full">
+  <ul>
+    <li *ngFor="let route of availableRoutes">
+      <a class="flex bg-white items-center flex-row" [routerLink]="route.url">
+        <div class="bg-white menu-icon side-nav-icon">
+          <fa-icon [icon]="route.icon"></fa-icon>
+        </div>
+        <div
+          class="route-name relative"
+          [ngClass]="sideNavOpened ? 'open-side-nav' : 'close-side-nav'"
+        >
+          <span class="px-2">
+            {{ route.name }}
+          </span>
+        </div>
+      </a>
+    </li>
+  </ul>
+</aside>

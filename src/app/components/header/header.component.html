@@ -1,0 +1,44 @@
+<header
+  class="px-6 py-2 w-full gap-4 flex-row flex justify-between items-center"
+>
+  <div class="bg-gray-100 rounded-lg">
+    <fa-icon class="pl-2" [icon]="'search'"></fa-icon>
+    <input
+      type="text"
+      class="p-2 rounded-lg bg-gray-100 focus:outline-none"
+      placeholder="Search..."
+    />
+  </div>
+
+  <div class="flex items-center gap-1 ml-auto">
+    <div class="flex flex-row rounded-lg border-2 z-1000">
+      <select
+        (change)="changeLang($event)"
+        #selectLang
+        [value]="currentLang"
+        class="p-2 focus:outline-none rounded-lg appearance-none"
+      >
+        <option value="en">ENG</option>
+        <option value="fr">FR</option>
+      </select>
+      <div
+        (click)="selectLang.click()"
+        class="flex items-center px-2 text-gray-400"
+      >
+        <fa-icon [icon]="'chevron-down'"></fa-icon>
+      </div>
+    </div>
+    <div class="header-icon cursor-pointer">
+      <fa-icon [icon]="'comment'"></fa-icon>
+    </div>
+    <div class="header-icon cursor-pointer">
+      <fa-icon [icon]="'bell'"></fa-icon>
+    </div>
+    <div class="flex flex-row items-center">
+      <div class="header-icon cursor-pointer">
+        <fa-icon [icon]="'user'"></fa-icon>
+      </div>
+      <div>Jeevith Ramesh</div>
+    </div>
+  </div>
+</header>
