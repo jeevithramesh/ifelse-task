@@ -2,7 +2,11 @@
   <div class="text-xl font-semibold mb-2 text-gray-darker">
     {{ chartTitle }}
   </div>
-  <div class="flex justify-center items-center canvas-container">
+  <div class="flex justify-center items-center canvas-container relative">
     <canvas class="canvas-container" #canvasEl></canvas>
+    <div class="max-val absolute text-center" *ngIf="chartType === 'doughnut'">
+      <div class="text-xl text-gray-darker">{{ getMaxVal() | number : "1.0-0" }}%</div>
+      <div class="text-xs text-gray-medium">Popular Items</div>
+    </div>
   </div>
 </div>

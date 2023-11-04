@@ -36,4 +36,14 @@ export class GraphDisplayComponent implements OnInit, AfterViewInit {
       options: this.chartOptions,
     });
   }
+
+  getMaxVal() {
+    const arr: any[] = this.chartData.datasets[0].data;
+    const max = arr.reduce(
+      (max, current) => Math.max(max, current),
+      Number.NEGATIVE_INFINITY
+    );
+    const sum = arr.reduce((sum, current) => sum + current, 0);
+    return (max / sum) * 100;
+  }
 }
