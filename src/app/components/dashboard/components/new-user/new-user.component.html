@@ -23,9 +23,9 @@
           <td class="p-2 progress-min-width w-36">
             <div class="flex items-center flex-row gap-2 rounded-full h-2">
               <div
-                [ngClass]="getProgressBarClass(user.progress)"
                 class="rounded-full h-1"
-                [style.width]="user.progress + '%'"
+                [ngClass]="getProgressBarClass(user.progress)"
+                [ngStyle]="{ width: user.progress + '%' }"
               ></div>
               <div
                 [ngClass]="getProgressTextClass(user.progress)"
