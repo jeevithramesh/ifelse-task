@@ -1,7 +1,7 @@
 <aside class="h-full">
   <ul>
     <li *ngFor="let route of availableRoutes">
-      <a class="flex bg-white items-center flex-row" [routerLink]="route.url">
+      <a class="flex bg-white items-center flex-row menu-item" [routerLink]="route.url">
         <div class="bg-white menu-icon side-nav-icon">
           <fa-icon [icon]="route.icon"></fa-icon>
         </div>

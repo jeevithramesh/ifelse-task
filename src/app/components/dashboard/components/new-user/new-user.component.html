@@ -7,12 +7,13 @@
       <tbody>
         <tr *ngFor="let user of newUsers" class="border-t">
           <td class="p-2">
-            <div class="w-10 h-10 rounded-full overflow-hidden">
+            <div class="w-10 h-10 overflow-hidden relative">
               <img
                 [src]="user.picture"
                 alt="{{ user.name }}"
-                class="w-full h-full object-contain"
+                class="w-full h-full rounded-full object-contain"
               />
+              <div class="online"></div>
             </div>
           </td>
           <td class="p-2">

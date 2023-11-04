@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
           {
             label: 'Sales (INR)',
             data: [350, 420, 280, 550, 480, 620],
-            borderColor: 'rgba(54, 162, 235, 1)',
+            borderColor: '#64b2e6',
             backgroundColor: 'rgba(54, 162, 235, 0.2)',
             tension: 0.4
           },
@@ -68,9 +68,9 @@ export class DashboardComponent implements OnInit {
           {
             data: [120, 75, 110],
             backgroundColor: [
-              'rgba(54, 162, 235, 0.6)',
-              'rgba(54, 162, 235, 0.4)',
-              'rgba(0, 0, 255, 0.4)',
+              '#64b2e6',
+              '#1d56ab',
+              '#2b6ec5',
             ],
           },
         ],
